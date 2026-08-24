@@ -1,0 +1,18 @@
+column,description
+transaction_id,Unique payment transaction identifier
+customer_id,Synthetic customer identifier
+amount,Failed payment amount in INR
+payment_method,Payment method used
+failure_reason,Synthetic payment failure category
+retry_count,Number of recovery retries already attempted before prediction
+hours_since_failure,Hours elapsed since the failed payment
+previous_payments,Number of prior payments
+previous_successes,Number of prior successful payments
+previous_failures,Number of prior failed payments
+customer_lifetime_value,Estimated customer lifetime value in INR
+customer_tenure_days,Customer tenure in days
+avg_previous_amount,Average amount of prior payments in INR
+payment_success_rate,Historical payment success rate
+days_since_last_success,Days since customer's last successful payment
+failed_payment_count_30d,Number of failed payments in the previous 30 days
+recovered,"Target: recovered within the defined recovery window (1=yes, 0=no)"

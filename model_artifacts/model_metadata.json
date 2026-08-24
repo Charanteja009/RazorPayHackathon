@@ -1,0 +1,19 @@
+{
+    "final_model_name": "PyTorch MLP",
+    "optimal_prediction_threshold": 0.07070707070707072,
+    "business_assumptions": {
+        "average_recovery_rate": 0.8,
+        "cost_per_recovery_attempt": 50
+    },
+    "mlp_architecture": {
+        "input_size": 24,
+        "layers": [
+            64,
+            32,
+            16,
+            1
+        ],
+        "activation": "ReLU",
+        "dropout_rate": 0.3
+    }
+}

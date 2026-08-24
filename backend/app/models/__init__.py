@@ -1,0 +1,33 @@
+from backend.app.models.db_models import (
+    Customer,
+    Transaction,
+    PaymentAttempt,
+    RecoveryPrediction,
+    RecoveryAction,
+    AgentRun,
+    AuditLog,
+    RecoveryOutcome,
+    LLMRequest,
+    IdempotencyRecord,
+    WorkflowState,
+    ActionState,
+    DiagnosisType,
+    ActionType,
+)
+
+__all__ = [
+    "Customer",
+    "Transaction",
+    "PaymentAttempt",
+    "RecoveryPrediction",
+    "RecoveryAction",
+    "AgentRun",
+    "AuditLog",
+    "RecoveryOutcome",
+    "LLMRequest",
+    "IdempotencyRecord",
+    "WorkflowState",
+    "ActionState",
+    "DiagnosisType",
+    "ActionType",
+]
