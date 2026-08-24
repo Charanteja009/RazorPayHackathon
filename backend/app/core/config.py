@@ -1,5 +1,8 @@
 import os
 from pydantic_settings import BaseSettings
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class Settings(BaseSettings):
     PROJECT_NAME: str = "AI Revenue Recovery Platform"
@@ -18,9 +21,9 @@ class Settings(BaseSettings):
     OLLAMA_BASE_URL: str = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
     
     # Razorpay Gateway Keys
-    RAZORPAY_KEY_ID: str = os.getenv("RAZORPAY_KEY_ID", "")
-    RAZORPAY_KEY_SECRET: str = os.getenv("RAZORPAY_KEY_SECRET", "")
-    USE_MOCK_GATEWAY: bool = os.getenv("USE_MOCK_GATEWAY", "true").lower() == "true"
+    RAZORPAY_KEY_ID: str = os.getenv("RAZORPAY_KEY_ID", "rzp_test_TTiD0FphSGqvFX")
+    RAZORPAY_KEY_SECRET: str = os.getenv("RAZORPAY_KEY_SECRET", "j2z24ohEqOPK9Vl9pKRkQRuv")
+    USE_MOCK_GATEWAY: bool = os.getenv("USE_MOCK_GATEWAY", "false").lower() == "true"
     
     # Business Logic Defaults
     MAX_RETRY_COUNT: int = 3

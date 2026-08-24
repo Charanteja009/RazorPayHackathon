@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from backend.app.api.endpoints import recovery, dashboard, audit, agents, llm, health
+from backend.app.api.endpoints import recovery, dashboard, audit, agents, llm, health, gateway
 
 api_router = APIRouter()
 
@@ -8,4 +8,5 @@ api_router.include_router(dashboard.router, prefix="/dashboard", tags=["Dashboar
 api_router.include_router(audit.router, prefix="/audit", tags=["Audit Trail"])
 api_router.include_router(agents.router, prefix="/agents", tags=["Agents Timeline"])
 api_router.include_router(llm.router, prefix="/llm", tags=["LLM Gateway"])
+api_router.include_router(gateway.router, prefix="/gateway", tags=["Razorpay Gateway"])
 api_router.include_router(health.router, tags=["System Health"])
